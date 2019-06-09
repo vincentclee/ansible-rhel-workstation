@@ -1,0 +1,5 @@
+#!/bin/bash -exo pipefail
+
+pip3 install --upgrade ansible
+ansible-galaxy install vincentclee.ansible_rhel_workstation --force
+ansible-playbook ~/.ansible/roles/vincentclee.ansible_rhel_workstation/playbook.yml

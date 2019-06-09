@@ -1,0 +1,4 @@
+---
+- hosts: localhost
+  roles:
+    - vincentclee.ansible_rhel_workstation
