@@ -1,0 +1,29 @@
+---
+- name: Install package groups
+  package:
+    name: "{{ package_groups }}"
+    state: present
+  notify:
+    - Install package groups optional packages
+
+- name: Install common packages
+  package:
+    name:
+      - acpid
+      - elfutils-libelf-devel
+      - podman-docker
+    state: present
+
+- name: Install common python packages
+  pip:
+    name:
+      - awscli
+      - glances[cpuinfo,gpu]
+    state: present
+
+- name: Disable PackageKit and ensure it is masked
+  systemd:
+    name: packagekit
+    state: stopped
+    enabled: no
+    masked: yes

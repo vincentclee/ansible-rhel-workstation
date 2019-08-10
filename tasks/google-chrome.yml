@@ -1,0 +1,14 @@
+---
+- name: Add google-chrome repository
+  yum_repository:
+    name: google-chrome
+    file: google-chrome
+    baseurl: http://dl.google.com/linux/chrome/rpm/stable/x86_64
+    gpgkey: https://dl.google.com/linux/linux_signing_key.pub
+    enabled: yes
+    gpgcheck: yes
+
+- name: Install google-chrome-stable package
+  package:
+    name: google-chrome-stable
+    state: present
