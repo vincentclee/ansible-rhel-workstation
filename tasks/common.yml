@@ -18,6 +18,7 @@
   pip:
     name:
       - awscli
+      - ansible-lint
       - glances[cpuinfo,gpu]
     state: present
 
