@@ -1,9 +1,16 @@
 ---
-- name: Install common packages
-  yum:
+- name: Install package groups
+  package:
+    name: "{{ package_groups }}"
+    state: present
+  notify:
+    - Install package groups optional packages
+
+- name: Install common python packages
+  pip:
     name:
-      - git
-      - gcc
+      - awscli
+      - glances[cpuinfo]
     state: present
 
 - name: Disable PackageKit and ensure it is masked

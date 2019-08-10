@@ -1,2 +1,10 @@
 ---
-# defaults file for test-role-1
+package_groups:
+  - "@rpm-development-tools"
+  - "@development"
+  - "@security-tools"
+  - "@smart-card"
+  - "@system-tools"
+  - "@network-server"
+  - "@graphical-admin-tools"
+  - "@scientific"
