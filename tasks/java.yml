@@ -1,0 +1,14 @@
+---
+- name: Install OpenJDK packages
+  package:
+    name:
+      - java-1.8.0-openjdk-devel
+      - java-11-openjdk-devel
+    state: present
+
+- name: Install java tool packages
+  package:
+    name:
+      - ant
+      - maven
+    state: present
