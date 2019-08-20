@@ -1,0 +1,8 @@
+---
+- name: Install fedora-release reppo
+  yum:
+    name: https://extras.getpagespeed.com/release-el8-latest.rpm
+    state: present
+
+- name: Install vlc package
+  command: dnfplus install vlc
