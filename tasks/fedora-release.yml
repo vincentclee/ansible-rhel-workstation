@@ -5,4 +5,4 @@
     state: present
 
 - name: Install vlc package
-  command: dnfplus install vlc
+  shell: source /etc/profile.d/dnfplus.sh && dnfplus install vlc
