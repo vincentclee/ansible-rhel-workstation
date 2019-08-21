@@ -5,6 +5,9 @@
     state: present
 
 - name: Install vlc package
-  shell: shopt -s expand_aliases && source /etc/profile.d/dnfplus.sh && dnfplus install vlc
+  shell: |
+    shopt -s expand_aliases
+    source /etc/profile.d/dnfplus.sh
+    dnfplus install vlc
   args:
     executable: /bin/bash
