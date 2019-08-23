@@ -23,11 +23,11 @@
 - name: Install more common packages
   package:
     name:
-      - ethstatus
-      - figlet
+      #- ethstatus
+      #- figlet
       - fio
       - htop
-      - httping
+      #- httping
       - iftop
       - iptraf
       - jq
@@ -35,7 +35,7 @@
       - telnet
       - dnf-utils
       - nvme-cli
-      - parallel
+      #- parallel
     state: present
 
 - name: Install common python packages
