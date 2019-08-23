@@ -3,4 +3,3 @@
 - include_tasks: google-chrome.yml
 - include_tasks: java.yml
 - include_tasks: sublime-text.yml
-- include_tasks: fedora-release.yml
