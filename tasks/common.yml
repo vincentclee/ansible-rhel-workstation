@@ -22,7 +22,7 @@
 
 - name: Install elrepo repo
   yum:
-    name: https://www.elrepo.org/elrepo-release-8.0-2.el8.elrepo.noarch.rpm (external link)
+    name: https://www.elrepo.org/elrepo-release-8.0-2.el8.elrepo.noarch.rpm
     state: present
 
 - name: Install more common packages
