@@ -15,11 +15,9 @@
       - dnf-utils
     state: present
 
-- name: Install epel-release repos
+- name: Install epel-release repo
   yum:
-    name:
-      - https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-      - https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+    name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
     state: present
 
 - name: Install more common packages
