@@ -1,0 +1,7 @@
+---
+- name: Disable PackageKit and ensure it is masked
+  systemd:
+    name: packagekit
+    state: stopped
+    enabled: no
+    masked: yes

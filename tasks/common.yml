@@ -20,11 +20,6 @@
     name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
     state: present
 
-- name: Install elrepo repo
-  yum:
-    name: https://www.elrepo.org/elrepo-release-8.0-2.el8.elrepo.noarch.rpm
-    state: present
-
 - name: Install more common packages
   package:
     name:
@@ -50,10 +45,3 @@
       - ansible-lint
       - glances[cpuinfo,gpu]
     state: present
-
-- name: Disable PackageKit and ensure it is masked
-  systemd:
-    name: packagekit
-    state: stopped
-    enabled: no
-    masked: yes
