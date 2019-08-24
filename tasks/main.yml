@@ -1,5 +1,6 @@
 ---
 - include_tasks: common.yml
+- include_tasks: cuda.yml
 - include_tasks: google-chrome.yml
 - include_tasks: java.yml
 - include_tasks: sublime-text.yml

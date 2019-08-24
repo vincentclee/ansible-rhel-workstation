@@ -1,0 +1,15 @@
+---
+- name: Install cuda reppo
+  yum:
+    name: http://developer.download.nvidia.com/compute/cuda/repos/rhel8/x86_64/cuda-rhel8.repo
+    state: present
+
+- name: Install dkms package
+  package:
+    name: dkms
+    state: present
+
+- name: Install cuda package
+  package:
+    name: cuda
+    state: present
