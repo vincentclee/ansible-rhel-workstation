@@ -15,8 +15,8 @@
       - dnf-utils
     state: present
 
-- name: Install common repos
-  yum:
+- name: Install common repositories
+  package:
     name:
       - https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
       - https://download1.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm
