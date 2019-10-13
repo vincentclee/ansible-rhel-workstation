@@ -4,4 +4,6 @@
 - include_tasks: google-chrome.yml
 - include_tasks: java.yml
 - include_tasks: sublime-text.yml
+- include_tasks: virtualbox.yml
+- include_tasks: tao.yml
 - include_tasks: tweaks.yml

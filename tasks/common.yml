@@ -39,6 +39,10 @@
       - dnf-utils
       - nvme-cli
       #- parallel
+      - gnome-tweaks
+      - unrar
+      - pv
+      - unrar
     state: present
 
 - name: Install common python packages
@@ -47,4 +51,5 @@
       - awscli
       - ansible-lint
       - glances[cpuinfo,gpu]
+      - pynvml
     state: present
