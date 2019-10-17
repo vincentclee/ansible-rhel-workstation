@@ -27,7 +27,7 @@
   package:
     name:
       #- ethstatus
-      #- figlet
+      - figlet
       - fio
       - htop
       #- httping

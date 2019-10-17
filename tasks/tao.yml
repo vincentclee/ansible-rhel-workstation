@@ -15,4 +15,14 @@
       - nomachine
       - stress
       - dmraid
+      #- kdiff3
+      - terminator
+      - filezilla
     state: present
+
+- name: Disable NoMachine password authentication
+  lineinfile:
+    path: /usr/NX/etc/server.cfg
+    regexp: '^EnablePasswordDB.*$'
+    line: EnablePasswordDB 1
+  notify: Restart service nxserver

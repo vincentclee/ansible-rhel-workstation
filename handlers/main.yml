@@ -2,3 +2,8 @@
 - name: Install package groups optional packages
   command: dnf group install -y --with-optional {{ item.replace("@", "") }}
   with_items: "{{ package_groups }}"
+
+- name: Restart service nxserver
+  service:
+    name: nxserver
+    state: restarted
