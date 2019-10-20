@@ -10,9 +10,9 @@
   package:
     name:
       - acpid
+      - dnf-utils
       - elfutils-libelf-devel
       - podman-docker
-      - dnf-utils
     state: present
 
 - name: Install common repositories
@@ -26,30 +26,30 @@
 - name: Install more common packages
   package:
     name:
+      - dnf-utils
       #- ethstatus
       - figlet
       - fio
+      - gnome-tweaks
       - htop
       #- httping
       - iftop
       - iptraf
       - jq
+      - nvme-cli
+      - p7zip
+      #- parallel
+      - pv
       - screen
       - telnet
-      - dnf-utils
-      - nvme-cli
-      #- parallel
-      - gnome-tweaks
-      - unrar
-      - pv
       - unrar
     state: present
 
 - name: Install common python packages
   pip:
     name:
-      - awscli
       - ansible-lint
+      - awscli
       - glances[cpuinfo,gpu]
       - pynvml
     state: present

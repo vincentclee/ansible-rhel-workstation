@@ -11,13 +11,14 @@
 - name: Install packages
   package:
     name:
-      - vlc
-      - nomachine
-      - stress
       - dmraid
-      #- kdiff3
-      - terminator
       - filezilla
+      #- kdiff3
+      - nomachine
+      - sha3sum
+      - stress
+      - terminator
+      - vlc
     state: present
 
 - name: Disable NoMachine password authentication

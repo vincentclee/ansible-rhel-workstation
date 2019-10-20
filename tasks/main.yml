@@ -5,5 +5,7 @@
 - include_tasks: java.yml
 - include_tasks: sublime-text.yml
 - include_tasks: virtualbox.yml
+- include_tasks: keybase.yml
 - include_tasks: tao.yml
+- include_tasks: terraform.yml
 - include_tasks: tweaks.yml
