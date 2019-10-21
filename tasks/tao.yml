@@ -19,6 +19,7 @@
       - stress
       - terminator
       - vlc
+      - viber
     state: present
 
 - name: Disable NoMachine password authentication
@@ -27,3 +28,13 @@
     regexp: '^EnablePasswordDB.*$'
     line: EnablePasswordDB 1
   notify: Restart service nxserver
+
+- name: Add Viber AdBlock mappings to /etc/hosts
+  blockinfile:
+    path: /etc/hosts
+    marker: "# {mark} ANSIBLE MANAGED BLOCK Viber AdBlock"
+    block: |
+      127.0.0.1 ads.viber.com
+      127.0.0.1 ads.aws.viber.com
+      127.0.0.1 ads-d.viber.com
+      127.0.0.1 s-bid.rmp.rakuten.com

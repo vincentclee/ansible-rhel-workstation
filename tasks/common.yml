@@ -43,6 +43,7 @@
       - screen
       - telnet
       - unrar
+      - whois
     state: present
 
 - name: Install common python packages
