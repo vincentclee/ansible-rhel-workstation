@@ -11,7 +11,7 @@ matrix:
 
 env:
   global:
-    - ROLE_NAME: glances
+    - ROLE_NAME: rhel_workstation
   matrix:
     - MOLECULE_DISTRO: centos:8
 
