@@ -13,10 +13,9 @@ provisioner:
   lint:
     name: ansible-lint
   inventory:
-    hosts:
+    group_vars:
       all:
-        extra_host:
-          containerized: yes
+        containerized: yes
 verifier:
   name: testinfra
   lint:
