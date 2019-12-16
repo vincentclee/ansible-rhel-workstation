@@ -8,3 +8,5 @@ package_groups:
   - "@network-server"
   - "@graphical-admin-tools"
   - "@scientific"
+
+containerized: no
