@@ -30,12 +30,17 @@
       #- ethstatus
       - figlet
       - fio
+      - fuse-exfat
       - gnome-tweaks
       - htop
       #- httping
       - iftop
+      - ImageMagick
       - iptraf
       - jq
+      - librsync-devel
+      - ncdu
+      - ntfs-3g
       - nvme-cli
       - p7zip
       #- parallel
@@ -51,6 +56,10 @@
     name:
       - ansible-lint
       - awscli
+      - boto
+      - docker
+      - fasteners
       - glances[cpuinfo,gpu]
+      - molecule
       - pynvml
     state: present

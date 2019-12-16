@@ -3,6 +3,7 @@
   command: dnf config-manager --add-repo http://developer.download.nvidia.com/compute/cuda/repos/rhel8/x86_64/cuda-rhel8.repo
   args:
     creates: /etc/yum.repos.d/cuda-rhel8.repo
+    warn: no
 
 - name: Install dkms package
   package:

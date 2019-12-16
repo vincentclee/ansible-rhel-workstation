@@ -12,14 +12,16 @@
   package:
     name:
       - dmraid
+      - duplicity
       - filezilla
       #- kdiff3
       - nomachine
+      - s3cmd
       - sha3sum
       - stress
       - terminator
-      - vlc
       - viber
+      - vlc
     state: present
 
 - name: Disable NoMachine password authentication
@@ -27,6 +29,14 @@
     path: /usr/NX/etc/server.cfg
     regexp: '^EnablePasswordDB.*$'
     line: EnablePasswordDB 1
+  notify: Restart service nxserver
+
+- name: Disable NoMachine automatic check for updates
+  lineinfile:
+    path: /usr/NX/etc/server.cfg
+    regexp: '^UpdateFrequency.*$'
+    insertafter: '^#UpdateFrequency.*$'
+    line: UpdateFrequency 0
   notify: Restart service nxserver
 
 - name: Add Viber AdBlock mappings to /etc/hosts

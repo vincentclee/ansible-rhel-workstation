@@ -1,0 +1,14 @@
+---
+- name: Install mysql repositories
+  package:
+    name:
+      - http://repo.mysql.com/mysql80-community-release-el8-1.noarch.rpm
+    state: present
+
+- name: Install mysql packages
+  package:
+    name:
+      - mysql-server
+      - mysql-workbench-community
+      - innotop
+    state: present
