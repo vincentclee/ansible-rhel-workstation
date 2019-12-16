@@ -12,7 +12,7 @@
   package:
     name:
       - dmraid
-      - duplicity
+      #- duplicity
       - filezilla
       #- kdiff3
       - nomachine
