@@ -26,14 +26,18 @@
 - name: Install more common packages
   package:
     name:
+      - dconf-editor
       - dnf-utils
       #- ethstatus
       - figlet
       - fio
       - fuse-exfat
       - gnome-tweaks
+      - google-noto-emoji-color-fonts
+      - google-noto-emoji-fonts
       - htop
-      #- httping
+      - httpd-tools
+      - httping
       - iftop
       - ImageMagick
       - iptraf
@@ -43,7 +47,7 @@
       - ntfs-3g
       - nvme-cli
       - p7zip
-      #- parallel
+      - parallel
       - pv
       - screen
       - telnet

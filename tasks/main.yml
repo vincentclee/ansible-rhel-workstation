@@ -8,5 +8,4 @@
 - include_tasks: keybase.yml
 - include_tasks: mysql.yml
 - include_tasks: tao.yml
-- include_tasks: terraform.yml
 - include_tasks: tweaks.yml
